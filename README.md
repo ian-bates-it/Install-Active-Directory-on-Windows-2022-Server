@@ -1,5 +1,8 @@
 # Install Active Directory on Windows 2022 Server
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/21fe72e9-5880-4222-9f1c-9f03d8b0a315" alt="Microsoft Active Directory Logo"/>
+</p>
 
 ---
 <br />
@@ -79,20 +82,167 @@
 - Accept the default features and click `Next` as shown below.
 
 
+  <img src="https://github.com/user-attachments/assets/ac71ec87-eb29-4071-9579-f735d9d33a69" height="80%" width="80%" />
 
 
 
 
+---
+<br />
+<h3>Active Directory Domain Services</h3>
+
+- Active Directory Domain Services stores information about users, computers, and other devices on the network.
+- Review the message and click `Next` to continue.
+
+
+  <img src="https://github.com/user-attachments/assets/f5da0087-03fc-4876-a800-1cf112dae7d5" height="80%" width="80%" />
+
+
+
+---
+<br />
+<h3>Confirmation</h3>
+
+
+- Review the confirmation of the roles, role services and features to be installed on our Windows 2022 Server.
+
+1. Click the `Restart the destination server automatically if required` check box.
+2. Click `Yes` to the restart notification pop-up menu.
+3. Click `Install` to complete the installation as shown below.
+
+  <img src="https://github.com/user-attachments/assets/bad9c85d-cd9b-4fa5-90b1-b65fdc356754" height="80%" width="80%" />
+
+
+
+---
+<br />
+<h4>AD Roles and Features Installation Complete</h4>
+
+- After the installation is complete, click the `Close` button and restart your Windows 2022 Server.
+
+  <img src="https://github.com/user-attachments/assets/ddba9c59-450e-4e87-8a8f-e3de898bdaab" height="80%" width="80%" />
+
+
+
+---
+---
+<br />
+<br />
+
+<h2>Promote Controller as Domain Controller</h2>
+
+
+- Active directory is installed, but it is not yet set up as a domain controller. (4:13)
+- So now we will configure our Windows 2022 Server as a domain controller in a new forest. 
+
+
+- Remote back into the Windows 2022 Server and log in with your administrator account.
+- In the Server Manager Dashboard, click the flag with a warning sign.
+- Select the link `Promote this server to a domain controller` as shown below.
+
+
+  <img src="https://github.com/user-attachments/assets/312c346f-1dce-44ae-8842-8aeda7077bfb" height="60%" width="60%" />
+
+
+
+---
+<br />
+<h3>Deployment Configuration</h3>
+
+1. Click the option for `Add a new forest`
+2. Enter in any domain name. I used `IanBates.com`
+3. Click the `Next` button as shown below.
+
+  <img src="https://github.com/user-attachments/assets/d909bedc-afc7-4129-b635-4f83704e2a3e" height="60%" width="60%" />
+
+
+---
+<br />
+<h3>Domain Controller Options</h3>
+
+- Leave all the default options selected.
+- Add a password for the <b>Directory Services Restore Mode (DSRM)</b>.
+- Click `Next` as shown below.
+
+  <img src="https://github.com/user-attachments/assets/6f44ee6e-745d-49ec-bd6c-8689fe12afe7" height="60%" width="60%" />
+
+
+---
+<br />
+<h3>DNS Options</h3>
+
+- Uncheck the `Create DNS delegation` checkbox.
+- Click `Next` as shown below.
+
+  <img src="https://github.com/user-attachments/assets/330c5a1c-2773-42c4-9797-5bf2651962b7" height="60%" width="60%" />
+
+
+---
+<br />
+<h3>Additional Options</h3>
+
+- You can adjust your NetBIOS name.
+- By default, the Active Directory configuration wizard will use your domain name before the domain extension.
+- Here, I went with `IANBATES` as my NetBIOS name.
+- Click `Next` to continue.
+
+  <img src="https://github.com/user-attachments/assets/70fb9431-3618-49c1-b52a-e8b3f4bb139f" height="80%" width="80%" />
+
+
+---
+<br />
+<h3>Paths</h3>
+
+- Accept the default paths for the `Database folder`, `Log files folder` and `SYSVOL folder` and click `Next` as shown below.
+
+  <img src="https://github.com/user-attachments/assets/beff2c08-f5e7-4a6d-a5b2-4bc97da0a861" height="60%" width="60%" />
+
+
+---
+<br />
+<h3>Review Options</h3>
+
+- Review your selections.
+- Click `Next` to continue.
+
+
+  <img src="https://github.com/user-attachments/assets/2d48310d-f02a-4f9b-bbbd-cf58de9ba296" height="60%" width="60%" />
+
+
+
+---
+<br />
+<h3>Prerequisites Check</h3>
+
+- Prerequisites need to be validated before Active Directory Domain Services can be installed on our Windows 2022 Server.
+- After the prerequisites check is completed, select `Install` to continue as shown below.
+
+  <img src="https://github.com/user-attachments/assets/78a1b435-2db9-4ee2-a12f-0b737ec9d2fd" height="80%" width="80%" />
+
+
+---
+<br />
+<h3>Restart Windows 2022 Server</h3>
+
+- After installation is complete, the Windows 2022 Server needs to be restarted.
+- Accept the notifications and let the server restart. This will disconnect your remote desktop connection.
+
+  <img src="https://github.com/user-attachments/assets/f1026da9-c028-4a68-b7af-cf26c22e04ba" height="80%" width="80%" />
+
+
+---
+<br />
+<h3>Sign Back Into Windows 2022 Server with your new Domain</h3>
+
+
+- Because our Windows 2022 Server is now a Domain Controller, we have to specify the context to which we want to log into from the Remote Desktop client.
+- The user accounts exist in a domain.
+- So now we have to specify the domain name that we added as the domain controller above.
+- In this example, my domain is `IanBates.com` and my administrator username is `Admin-DC`.
+- So in my Remote Desktop client, I will enter `IanBates.com\Admin-DC` into the User name field as shown below.
+
+  <img src="https://github.com/user-attachments/assets/002ed335-7a7c-4337-b9ef-6477fe9b8280" height="40%" width="40%" />
 
 
 
 
-
-
-
-
-
-
-
-
-  
