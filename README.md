@@ -25,12 +25,19 @@
 - Windows Server 2022
 
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+<h2>High-Level Configuration Steps</h2>
 
 - Part 1: [Install Active Directory Domain Services](https://github.com/ian-bates-it/Install-Active-Directory-on-Windows-2022-Server?tab=readme-ov-file#install-active-directory-domain-services)
 - Part 2: [Promote Controller As Domain Controller](https://github.com/ian-bates-it/Install-Active-Directory-on-Windows-2022-Server?tab=readme-ov-file#promote-controller-as-domain-controller)
 - Step 3: [Restart Server and Sign in with Domain\Username (`IanBates.com\Admin-DC`)](https://github.com/ian-bates-it/Install-Active-Directory-on-Windows-2022-Server?tab=readme-ov-file#restart-server-and-sign-in-with-domainusername-ianbatescomadmin-dc)
 
+
+
+<h2>Prerequisites</h2>
+
+1. Complete [Chapter 1 of this series, Creating a Windows 10 Pro and Windows 2022 Server Virtual Machines in Azure.](https://github.com/ian-bates-it/Azure-Virtual-Machine-Setup)
+
+2. Complete [Chapter 2 of this series, Configuring the DNS settings for our Windows 10 Pro (Client) and Windows 2022 Server (Domain Controller).](https://github.com/ian-bates-it/Azure-Controller-Client-Configuration)
 
 
 
