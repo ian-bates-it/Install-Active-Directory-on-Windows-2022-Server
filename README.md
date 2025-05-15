@@ -1,8 +1,48 @@
-# Install Active Directory on Windows 2022 Server
-
 <p align="center">
 <img src="https://github.com/user-attachments/assets/21fe72e9-5880-4222-9f1c-9f03d8b0a315" alt="Microsoft Active Directory Logo"/>
 </p>
+
+<!--
+<img src="https://github.com/user-attachments/assets/21fe72e9-5880-4222-9f1c-9f03d8b0a315" height="30%" width="30%"/>
+-->
+
+# Chapter 3: Install Active Directory on Windows 2022 Server
+
+- On the Windows 2022 Server we will install Active Directory Domain Services using the `Server Manager's` `Add Roles and Features Wizard`
+- 
+
+---
+
+<h2>Environments and Technologies Used</h2>
+
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+- Active Directory Domain Services
+
+<h2>Operating Systems Used </h2>
+
+- Windows Server 2022
+
+
+<h2>High-Level Deployment and Configuration Steps</h2>
+
+- Part 1: [Install Active Directory Domain Services]()
+- Part 2: [Promote Controller As Domain Controller](https://github.com/ian-bates-it/Install-Active-Directory-on-Windows-2022-Server?tab=readme-ov-file#promote-controller-as-domain-controller)
+- Step 3: [Restart Server and Sign in with Domain\Username (`IanBates.com\Admin-DC`)]()
+
+
+
+
+
+<br />
+<br />
+
+---
+
+<h1>Part 1:</h1>
+
+<h2>Install Active Directory Domain Services</h2>
+
 
 ---
 <br />
@@ -218,6 +258,16 @@
 - After the prerequisites check is completed, select `Install` to continue as shown below.
 
   <img src="https://github.com/user-attachments/assets/78a1b435-2db9-4ee2-a12f-0b737ec9d2fd" height="80%" width="80%" />
+
+
+<br />
+<br />
+
+---
+
+<h1>Part 3</h1>
+
+<h2>Restart Server and Sign in with Domain\Username (`IanBates.com\Admin-DC`)</h2>
 
 
 ---
