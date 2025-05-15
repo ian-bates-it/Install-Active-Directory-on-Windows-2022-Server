@@ -8,8 +8,9 @@
 
 # Chapter 3: Install Active Directory on Windows 2022 Server
 
-- On the Windows 2022 Server we will install Active Directory Domain Services using the `Server Manager's` `Add Roles and Features Wizard`
-- 
+- On the Windows 2022 Server we will install Active Directory Domain Services using the `Server Manager's` `Add Roles and Features Wizard`.
+- Then we will promote our Windows 2022 Server as a Domain Controller as part of the post-deployment configuration.
+- Finally, we will restart the server and log back into the server using our Domain\Username (`IanBates.com\Admin-DC`) instead of a simple username.
 
 ---
 
@@ -26,9 +27,9 @@
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Part 1: [Install Active Directory Domain Services]()
+- Part 1: [Install Active Directory Domain Services](https://github.com/ian-bates-it/Install-Active-Directory-on-Windows-2022-Server?tab=readme-ov-file#install-active-directory-domain-services)
 - Part 2: [Promote Controller As Domain Controller](https://github.com/ian-bates-it/Install-Active-Directory-on-Windows-2022-Server?tab=readme-ov-file#promote-controller-as-domain-controller)
-- Step 3: [Restart Server and Sign in with Domain\Username (`IanBates.com\Admin-DC`)]()
+- Step 3: [Restart Server and Sign in with Domain\Username (`IanBates.com\Admin-DC`)](https://github.com/ian-bates-it/Install-Active-Directory-on-Windows-2022-Server?tab=readme-ov-file#restart-server-and-sign-in-with-domainusername-ianbatescomadmin-dc)
 
 
 
@@ -43,6 +44,8 @@
 
 <h2>Install Active Directory Domain Services</h2>
 
+- We will remote into our Windows 2022 Server with Remote Desktop.
+- Then we will use the `Server Manager` to install Active Directory as outlined below.
 
 ---
 <br />
@@ -163,16 +166,20 @@
   <img src="https://github.com/user-attachments/assets/ddba9c59-450e-4e87-8a8f-e3de898bdaab" height="80%" width="80%" />
 
 
+<br />
+<br />
 
 ---
----
-<br />
-<br />
+
+<h1>Part 2:</h1>
 
 <h2>Promote Controller as Domain Controller</h2>
 
+<!--
+(4:13)
+-->
 
-- Active directory is installed, but it is not yet set up as a domain controller. (4:13)
+- Active directory is installed, but it is not yet set up as a domain controller. 
 - So now we will configure our Windows 2022 Server as a domain controller in a new forest. 
 
 
@@ -265,7 +272,7 @@
 
 ---
 
-<h1>Part 3</h1>
+<h1>Part 3:</h1>
 
 <h2>Restart Server and Sign in with Domain\Username (`IanBates.com\Admin-DC`)</h2>
 
