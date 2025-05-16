@@ -142,6 +142,8 @@
 <h3>Active Directory Domain Services</h3>
 
 - Active Directory Domain Services stores information about users, computers, and other devices on the network.
+- Active Directory Domain Services requires a DNS server to be installed on the network.
+- If you do not have a DNS server installed, you will be prompted to install the DNS Server role on this machine. 
 - Review the message and click `Next` to continue.
 
 
